@@ -1,0 +1,17 @@
+a) Quebra de Controle de Acesso
+O sistema permite deletar um usuário apenas colocando o id na URL:
+Risco:
+Um usuário comum poderia apagar contas de outros usuários ou até apagar uma conta administrativa, caso descubra ou chute o ID.
+
+b) Falhas Criptográficas
+A senha do banco de dados está escrita diretamente no código:
+Risco:
+Um invasor poderia acessar o banco da clínica e visualizar, alterar ou apagar dados sensíveis, como exames, receitas e informações de pacientes.
+
+c) Quebra de Controle de Acesso
+Não verifica se esse perfil pertence ao usuário logado.
+Então uma pessoa poderia trocar o ID e acessar o perfil de outro usuário:
+Risco:
+Um paciente poderia visualizar dados pessoais ou médicos de outro paciente apenas alterando o ID na URL.
+Em uma clínica, isso é grave porque pode expor exames, informações pessoais e histórico médico.
+ 
